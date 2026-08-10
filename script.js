@@ -1,4 +1,4 @@
-// Smooth scroll effect
+// Smooth scroll effect for internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -8,9 +8,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Logo glow pulse
-const logo = document.querySelector('.logo');
+// Title pulse effect
+const title = document.querySelector('.main-title');
 setInterval(() => {
-  logo.style.filter = 'drop-shadow(0 0 10px #ff3c00)';
-  setTimeout(() => logo.style.filter = 'none', 500);
+  title.style.transform = 'scale(1.05)';
+  setTimeout(() => title.style.transform = 'scale(1)', 500);
 }, 2000);
