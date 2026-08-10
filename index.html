@@ -1,40 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bazz Fire</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAZZ FIRE — Esports Tournament Organizer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1 class="main-title">Bazz Fire</h1>
-    <h2 class="subtitle">Welcome Survivors</h2>
-    <p class="tagline">Stay connected with us, we are starting soon...</p>
-  </header>
 
-  <section class="features">
-    <h2>Our Plus Points</h2>
-    <ul>
-      <li>Weekly Rewards</li>
-      <li>Exciting Giveaways</li>
-    </ul>
-  </section>
+<canvas id="embers"></canvas>
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <div class="icons">
-      <a href="https://instagram.com/bazzfire_official" target="_blank">
-        <img src="images/insta-icon.png" alt="Instagram" class="icon">
-        @bazzfire_official
-      </a>
-      <a href="mailto:bazzfireinfo@gmail.com">
-        <img src="images/gmail-icon.png" alt="Gmail" class="icon">
-        bazzfireinfo@gmail.com
-      </a>
-    </div>
-  </section>
+<div class="grain"></div>
 
-  <script src="script.js"></script>
+<header class="topbar">
+  <span class="topbar-tag">// EST. 2026</span>
+  <span class="topbar-tag topbar-status"><span class="dot"></span> RECRUITING NOW</span>
+</header>
+
+<main class="hero">
+  <p class="eyebrow">ESPORTS TOURNAMENT ORGANIZER</p>
+  <h1 class="brand">
+    <span class="brand-line" data-text="BAZZ">BAZZ</span><span class="brand-line brand-fire" data-text="FIRE">FIRE</span>
+  </h1>
+  <p class="tagline">Scrims are about to get lit. <span class="tagline-strong">Starting soon.</span></p>
+
+  <div class="hero-cta">
+    <a href="https://instagram.com/bazzfire_official" target="_blank" rel="noopener" class="btn btn-primary">
+      Follow for Drops
+    </a>
+    <a href="#benefits" class="btn btn-ghost">See What You Get</a>
+  </div>
+</main>
+
+<section class="benefits" id="benefits">
+  <p class="section-eyebrow">WHY SCRIM WITH US</p>
+  <h2 class="section-title">Every Lobby Pays Off</h2>
+
+  <div class="benefit-grid">
+    <article class="benefit-card">
+      <span class="benefit-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none"><path d="M24 4c6 6 10 12 10 18a10 10 0 0 1-20 0c0-3 1.5-6 4-8-.5 3 1 5 3 5s2-2 1-4c-1-2.5 0-6 2-11z" fill="currentColor"/></svg>
+      </span>
+      <h3>Weekly Rewards</h3>
+      <p>Fresh payouts every single week. Keep showing up, keep cashing in.</p>
+    </article>
+
+    <article class="benefit-card">
+      <span class="benefit-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none"><rect x="7" y="18" width="34" height="22" rx="2" fill="currentColor"/><rect x="20" y="18" width="8" height="22" fill="#0a0908"/><path d="M24 18c-4 0-8-2-8-6a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 4-4 6-8 6h-2z" fill="currentColor"/></svg>
+      </span>
+      <h3>Giveaways</h3>
+      <p>Surprise drops for the squad — gear, IDs, and shoutouts up for grabs.</p>
+    </article>
+
+    <article class="benefit-card">
+      <span class="benefit-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none"><path d="M24 4l6 12 13 2-9.5 9 2 13L24 34l-11.5 6 2-13L5 18l13-2z" fill="currentColor"/></svg>
+      </span>
+      <h3>High Rewards</h3>
+      <p>Bigger prize pools than your average scrim. Play harder, win heavier.</p>
+    </article>
+
+    <article class="benefit-card">
+      <span class="benefit-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="6" width="32" height="36" rx="2" fill="currentColor"/><rect x="14" y="14" width="20" height="3" fill="#0a0908"/><rect x="14" y="21" width="20" height="3" fill="#0a0908"/><rect x="14" y="28" width="12" height="3" fill="#0a0908"/></svg>
+      </span>
+      <h3>Full Record</h3>
+      <p>Every match logged. Track your stats, your squad's climb, your legacy.</p>
+    </article>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p class="footer-cta">Slots are filling. Get in before we go live.</p>
+  <div class="footer-links">
+    <a href="https://instagram.com/bazzfire_official" target="_blank" rel="noopener" class="footer-link">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg>
+      @bazzfire_official
+    </a>
+    <button class="footer-link footer-email" data-email="bazzfireinfo@gmail.com" type="button">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><rect x="2.5" y="4.5" width="19" height="15" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 6l9 7 9-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="email-text">bazzfireinfo@gmail.com</span>
+    </button>
+  </div>
+  <p class="footer-fine">© 2026 BAZZ FIRE. Built for the grind.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
